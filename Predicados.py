@@ -6,11 +6,14 @@ Estudiante = {
     "Angel":["23760339", "Programación","", "Asus", "Sistemas", "Chatgpt", "Bladimir", "Vigente"]
 }
 
+
+
 Maestro = {
     "Bladimir": ["Programación","Lenovo", 132],
     #Materia , Laptop,  NoEmpleado
     "Memo":["Calculo","", 141]
 }
+
 
 
 #Predicados
@@ -20,13 +23,12 @@ def enseña_a(x,y):
 
         if nombre_estudiante == y and datos[6] == x:
             return True
-    else:
         return False
 
 #caso real
-#print(enseña_a("Memo", "Eric"))
+print(enseña_a("Memo", "Eric"))
 #caso falso
-#print(enseña_a("Memo", "Angel"))
+print(enseña_a("Memo", "Angel"))
 
 
 
@@ -36,7 +38,6 @@ def estudia_carrera(x,y):
 
         if nombre_estudiante == x and datos[4] == y:
             return True
-    else:
         return False
 
 #caso real
@@ -50,7 +51,6 @@ def estudiante(x):
     for nombre_estudiante in Estudiante:
         if nombre_estudiante == x:
             return True
-    else:
         return False
 
 #caso real
@@ -65,13 +65,12 @@ def maestro(x):
     for nombre_maestro in Maestro:
         if nombre_maestro == x:
             return True
-    else:
         return False
 
 # caso real
-# print (maestro("Bladimir"))
+#print (maestro("Bladimir"))
 # caso falso
-# print (maestro("Jose"))
+#print (maestro("Jose"))
 
 
 def deportista(x):
@@ -79,26 +78,24 @@ def deportista(x):
 
         if nombre_estudiante == x and datos[2] == "":
             return False
-    else:
-        return True
+    return True
 
 # caso real
-# print (deportista("Eric"))
+#print (deportista("Eric"))
 # caso falso
-# print (deportista("Angel"))
+#   print (deportista("Angel"))
 
 
 def tieneNoControl (x,y):
     for nombre_estudiante, datos in Estudiante.items():
          if nombre_estudiante == x and datos[0] == y:
                     return True
-    else:
-        return False
+    return False
 
 # caso real
-# print(tieneNoControl("Eric", "23760307"))
+#print(tieneNoControl("Eric", "23760307"))
 # caso falso
-# print(tieneNoControl("Eric", "23760310"))
+#print(tieneNoControl("Eric", "23760310"))
 
 
 def tiene_Computadora(x,y):
@@ -106,9 +103,8 @@ def tiene_Computadora(x,y):
 
         if nombre_maestro == x and datos[1] == y:
             return True
-    else:
-        return False
+    return False
 
 #caso real
-print(tiene_Computadora("Bladimir", "Lenovo"))
-print(tiene_Computadora("Bladimir", "Asus"))
+#print(tiene_Computadora("Bladimir", "Lenovo"))
+#print(tiene_Computadora("Bladimir", "Asus"))
